@@ -83,3 +83,9 @@
 .product_btn:hover{
     filter: brightness(1.2);
 }
+.bx-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1px;
+}
