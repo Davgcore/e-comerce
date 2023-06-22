@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { getAllProductThunk } from './store/slices/products.slice'
+import ProducIdPage from './pages/ProducIdPage'
 function App() {
 
   const dispatch = useDispatch()
@@ -17,6 +18,7 @@ function App() {
     <div className='app'>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/product/:id' element={<ProducIdPage />} />
       </Routes>
       <h1>HOLA SOY LAURA</h1>
     </div>
