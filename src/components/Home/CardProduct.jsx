@@ -1,10 +1,20 @@
+import { useNavigate } from 'react-router-dom'
 import './styles/CardProduct.css'
 
 const CardProduct = ({ prod }) => {
 
+    const navigate = useNavigate()
+
+    const handleDetail = () =>{
+        navigate(`/product/${prod.id}`)
+    }
+
+    const handleAddCart = e => {
+        e.stopPropagation()
+    }
 
 return (
-    <article className="product">
+    <article className="product" onClick={handleDetail}>
         <header className="product_header">
             <div className="product_img-container">
                 <img className="product_img" src={prod.images[1].url} alt="" />
@@ -23,7 +33,7 @@ return (
                 <span className="product_price-label">Price</span>
                 <h3 className="product_price-value">{prod.price}</h3>
             </article>
-            <button className="product_btn">
+            <button className="product_btn" onClick={handleAddCart}>
                 <i className='bx bx-cart' ></i>
             </button>
         </section>
