@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+      <h1>HOLA SOY LAURA</h1>
     </div>
   )
 }
