@@ -9,13 +9,17 @@ import ProductIdPage from './pages/ProductIdPage'
 import RegisterPage from './pages/RegisterPage'
 import Header from './components/shared/Header'
 import LoginPage from './pages/LoginPage'
+import { getCartThunk } from './store/slices/cart.slice'
+import CartPage from './pages/CartPage'
 function App() {
 
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getAllProductThunk())
+    dispatch(getCartThunk())
   }, [])
+  
 
   return (
     <div className='app'>
@@ -25,6 +29,7 @@ function App() {
         <Route path='/product/:id' element={<ProductIdPage />}/>
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/cart' element={<CartPage />} />
       </Routes>
     </div>
   )

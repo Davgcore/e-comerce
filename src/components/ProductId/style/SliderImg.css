@@ -1,0 +1,12 @@
+.slider{
+    width: 100%;
+    max-width: 600px;
+    border: 5px solid red;
+    padding: 2rem;
+}
+
+.slider__movible{
+    dispa: flex;
+    border: 5px solid blue;
+    width: 300%;
+}

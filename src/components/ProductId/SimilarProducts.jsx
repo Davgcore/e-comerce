@@ -15,9 +15,6 @@ const SimilarProducts = ({ product }) => {
   }, [product])
 
 
-  console.log(productsByCategory);
-
-
   return (
     <div>
       <h2>Similar products</h2>
