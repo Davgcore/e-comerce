@@ -21,7 +21,7 @@ const ProducIdPage = () => {
         <ProductInfo 
         product={product}
         />
-
+        
         <SimilarProducts />
     </div>
     )
