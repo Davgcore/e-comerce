@@ -30,6 +30,7 @@ img{
 input,button{
     border: none;
     font-family: inherit;
+    border: 1px solid;
 }
 button{
     cursor: pointer;
