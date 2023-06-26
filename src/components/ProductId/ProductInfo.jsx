@@ -19,7 +19,6 @@ const ProductInfo = ({ product }) => {
         <h3>{product?.brand}</h3>
         <h2>{product?.title}</h2>
         <p>{product?.description}</p>
-
         <footer>
             <ul>
                 <li>

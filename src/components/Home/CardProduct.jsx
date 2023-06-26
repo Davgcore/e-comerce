@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './styles/CardProduct.css'
 import { useDispatch } from 'react-redux'
 import { postCartThunk } from '../../store/slices/cart.slice'
@@ -37,6 +38,7 @@ return (
                 <span className="product_price-label">Price</span>
                 <h3 className="product_price-value">{prod.price}</h3>
             </article>
+            <button className="product_btn" onClick={handleAddCart}>
             <button className="product_btn" onClick={handleAddCart}>
                 <i className='bx bx-cart' ></i>
             </button>
