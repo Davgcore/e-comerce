@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import useFetch from "../hooks/useFetch"
 import useAuth from "../hooks/useAuth"
+import LogIn from './styles/login.css'
 
 
 const LoginPage = () => {
