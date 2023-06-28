@@ -3,15 +3,17 @@ import useAuth from "../hooks/useAuth"
 import Register from './styles/register.css'
 import { Link } from "react-router-dom"
 
+
 const RegisterPage = () => {
 
-  const { register, handleSubmit, reset } = useForm()
-  const { createNewUser } = useAuth()
+    const  {register, handleSubmit, reset } = useForm()
+    
+    const {createUser} = useAuth()
 
 
   const submit = data => {
     const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/users'
-    createNewUser(url, data)
+    createUser(url, data)
     reset ({
       firstName: '', 
       lastName: '',
