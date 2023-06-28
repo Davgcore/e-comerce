@@ -13,8 +13,8 @@ const {setProducG} = productsSlice.actions
 
 export default productsSlice.reducer
 
-export const getAllProductThunk = () => (dispatch) => {
-    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/products'
+const defaultUrl = 'https://e-commerce-api-v2.academlo.tech/api/v1/products'
+export const getAllProductThunk = (url = defaultUrl ) => (dispatch) => {
     axios.get(url)
     .then(res => dispatch(setProducG(res.data)))
     .catch(err => console.log(err))
