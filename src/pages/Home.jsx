@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import CardProduct from '../components/Home/CardProduct';
+import './styles/Home.css'
 
 const Home = () => {
 
