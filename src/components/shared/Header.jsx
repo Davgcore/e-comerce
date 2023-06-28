@@ -25,6 +25,11 @@ const Header = () => {
                             <i className='bx bx-cart'></i>
                         </Link>
                     </li>
+                    <li className="cart_li">
+                        <Link className='cart_link' to={'/purchases'}>
+                            <i className='bx bx-align-justify'></i>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

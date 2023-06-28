@@ -37,7 +37,6 @@ return (
                 <span className="product_price-label">Price</span>
                 <h3 className="product_price-value">$ {prod.price}</h3>
             </article>
-            <button className="product_btn" onClick={handleAddCart}></button>
             <button className="product_btn" onClick={handleAddCart}>
                 <i className='bx bx-cart' ></i>
             </button>
