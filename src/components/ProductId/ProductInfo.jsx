@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { postCartThunk } from "../../store/slices/cart.slice"
+import { useDispatch } from "react-redux"
 
 
 const ProductInfo = ({ product }) => {
@@ -12,6 +14,11 @@ const ProductInfo = ({ product }) => {
     }
 
     const handleAdd = () => setQuantity(state => state + 1)
+
+    const dispatch = useDispatch()
+    const handleAddToCart = () => {
+        dispatch(postCartThunk(product, quantity))
+    }
 
 
   return (
@@ -34,7 +41,7 @@ const ProductInfo = ({ product }) => {
                     </div>
                 </li>
             </ul>
-            <button>Add to Cart</button>
+            <button onClick={handleAddToCart}>Add to Cart</button>
         </footer>
     </article>
   )

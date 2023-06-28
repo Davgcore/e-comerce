@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import useAuth from "../hooks/useAuth"
+import LogIn from './styles/login.css'
 
 const LoginPage = () => {
 
