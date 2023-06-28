@@ -21,7 +21,7 @@ const Home = () => {
 
  const cbFilter = prod => prod.title.toLowerCase().includes(inputValue)
 
- 
+
 
     return (
         <div className='home'>
