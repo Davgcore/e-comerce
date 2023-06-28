@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import CartElement from "../components/cart/CartElement";
 import Cart from './styles/Cart.css'
+import usePurchase from "../hooks/usePurchase";
 
 const CartPage = () => {
 
@@ -10,7 +11,12 @@ const CartPage = () => {
       const subtotal = cv.quantity * cv.product.price
       return acc + subtotal
     }, 0)
+    
+    const { makePurchase } = usePurchase()
 
+    const handlePurchase = () => {
+      makePurchase()
+    }
 
   return (
     <div>
@@ -29,6 +35,7 @@ const CartPage = () => {
           <div>
             <span>Total:</span><span>{totalPrice}</span>
           </div>
+          <button onClick={handlePurchase} style={{ fontSize: '2rem'}}>Purchase this cart</button>
         </footer>
     </div>
   )

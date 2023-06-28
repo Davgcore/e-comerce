@@ -11,6 +11,7 @@ import Header from './components/shared/Header'
 import LoginPage from './pages/LoginPage'
 import { getCartThunk } from './store/slices/cart.slice'
 import CartPage from './pages/CartPage'
+import PurchasesPage from './pages/PurchasesPage'
 function App() {
 
   const dispatch = useDispatch()
@@ -30,6 +31,7 @@ function App() {
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='purchases' element={<PurchasesPage />} />
       </Routes>
       
     </div>

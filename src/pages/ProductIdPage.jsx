@@ -18,7 +18,7 @@ const ProductIdPage = () => {
 
 
   return (
-    <div>
+    <div className="products__container">
         <SliderImgs 
           product={product}
         />
