@@ -31,7 +31,6 @@ function App() {
         <Route path='/login' element={<LoginPage />} />
         <Route path='/cart' element={<CartPage />} />
       </Routes>
-      <h1>HOLA SOY LAURA</h1>
     </div>
   )
 }

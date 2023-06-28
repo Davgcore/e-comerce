@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import sliderImg from './style/SliderImg.css'
+import './style/SliderImg.css'
 
 const SliderImgs = ({ product }) => {
 
@@ -27,7 +27,7 @@ const SliderImgs = ({ product }) => {
 
 
     return (
-        <>
+        <div className='silder_container'>
             <div className="slider">
                 <button onClick={handlePrevious} className='slider_btn slider__left'>&lt;</button>
                 <div style={styleMovible} className="slider__movible">
@@ -56,7 +56,7 @@ const SliderImgs = ({ product }) => {
                     }
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import ProductInfo from "../components/ProductId/ProductInfo"
 import SimilarProducts from "../components/ProductId/SimilarProducts"
 import SliderImgs from "../components/ProductId/SliderImgs"
+import './style/pageStyles.css'
 
 const ProductIdPage = () => {
 
@@ -18,16 +19,18 @@ const ProductIdPage = () => {
 
 
   return (
-    <div>
+    <div className="father">
+      <div className="product-flex">
         <SliderImgs 
-          product={product}
-        />
-        <ProductInfo 
             product={product}
         />
-        <SimilarProducts 
-          product={product}
+        <ProductInfo 
+              product={product}
         />
+      </div>
+      <SimilarProducts 
+        product={product}
+      />
     </div>
   )
 }

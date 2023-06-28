@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 import CardProduct from "../Home/CardProduct"
+import './style/SliderImg.css'
 
 
 const SimilarProducts = ({ product }) => {
@@ -16,18 +17,18 @@ const SimilarProducts = ({ product }) => {
 
 
   return (
-    <div>
-      <h2>Similar products</h2>
-      <div>
+    <div className="similar__products">
+      <h2 className="title_similar">Similar products</h2>
+      <div className="similarproducts__flex">
         {
-         productsByCategory?.map(prod => {
+          productsByCategory?.map(prod => {
           if (product.id !== prod.id) {
             return (<CardProduct 
                   key={prod.id}
                   prod={prod}
               />)
           }
-         })
+          })
         }
       </div>
     </div>

@@ -1,22 +1,27 @@
+
 .slider{
     width: 100%;
     max-width: 600px;
     position: relative;
     overflow: hidden;
+    margin: auto;
 }
 
 .slider_btn{
-    width: 1.5rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: #c42b2b;
+    background-color: #f85555;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
     cursor: pointer;
+    height: 40px;
+    line-height: 2.2;
+    width: 40px;
+    z-index: 9;
+    text-align: center;
 }
 
 .slider_btn:hover {
@@ -71,3 +76,139 @@
     border: 3px solid #c42b2b;
     border-radius: 0.5rem;
 }
+
+/*product info*/
+
+.produc__info{
+    padding: 1rem;
+}
+
+.title__brand{
+    padding: 0.5rem;
+}
+
+.title__title {
+    padding: 0.5rem;
+}
+
+.produc__description{
+    padding: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.price__title{
+    color: rgb(178, 181, 181);
+    size: 1rem;
+    font-size: 1rem;
+    font-weight: 100px;
+    padding: 0.2rem;
+}
+
+.price__content{
+    padding: 0.2rem;
+    font-weight: bold;
+}
+
+.ul__productinfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.button__minus{
+    border-color: darkgrey;
+    background: none;
+    height: 28px;
+    line-height: 2;
+    width: 30px;
+}
+
+.bx{
+    margin-top: 1px;
+    font-size: larger;
+}
+
+.button__plus{
+    border-color: darkgrey;
+    background: none;
+    height: 28px;
+    line-height: 2;
+    width: 30px;
+}
+
+.cuantity{
+    line-height: 1.7;
+    padding: 0 20px;
+    border: 1px solid darkgray
+}
+
+.add__card{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    background: #f85555;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    padding: 15px;
+    width: 100%;
+}
+
+.bx-cart{
+    padding: 0 0.5rem;
+    font-size: large;
+}
+
+@media (min-width: 1300px) {
+    .silder_container{
+        max-width: 35%;
+    }
+    .produc__info{
+        padding: 0.5rem;
+        max-width: 30%;
+        margin-top: 60px;
+    }
+    
+    
+}
+
+
+/*similar products*/
+
+.similar__products{
+    width: 100%;
+    justify-content: center;
+}
+
+.similarproducts__flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:  5rem;
+    justify-content: space-evenly;
+    
+}
+
+.title_similar{
+    margin-top: 20px;
+    color: #f85555;
+    display: block;
+    font-size: 1.2rem;
+    text-align:center;
+    text-transform: capitalize;
+}
+
+
+
+
+
