@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import ProductInfo from "../components/ProductId/ProductInfo"
 import SimilarProducts from "../components/ProductId/SimilarProducts"
 import SliderImgs from "../components/ProductId/SliderImgs"
-import './style/pageStyles.css'
+import './styles/pageStyles.css'
 
 const ProductIdPage = () => {
 
