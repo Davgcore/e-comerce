@@ -19,15 +19,14 @@
     margin: auto;
     gap: 1rem;
     border-radius: 1rem;
-      
     overflow: hidden;
-    background-color: #1c1b29; 
+    background-color: white; 
 }
 
 .register__container::before{
     content: "";
     background-image: conic-gradient(
-        #aeaeae 20deg,
+        #f85555 20deg,
         transparent 120deg
     );
     height: 190%;

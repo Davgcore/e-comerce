@@ -49,7 +49,7 @@ const RegisterPage = () => {
             <input className="register__input" { ...register('phone')} type="number" id="phone" />
           </div>
           <button className="register__btn">Submit</button>
-          <p className="register__login">I have already an account lin <Link>Log In</Link></p>
+          <p className="register__login">I have already an account lin <Link to={'/login'}>Log In</Link></p>
         </form>
       </div>
     </div>
