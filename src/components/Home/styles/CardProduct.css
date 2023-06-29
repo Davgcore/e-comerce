@@ -1,6 +1,6 @@
 .product {
     width: 100%;
-    max-width: 320px;
+    max-width: 290px;
     border: 1px solid #ccc;
     border-radius: 0.6em;
     cursor: pointer;
@@ -87,6 +87,7 @@
     background-color: var(--color-red);
     color: white;
 }
+
 .product_btn:hover{
     filter: brightness(1.2);
 }

@@ -15,41 +15,48 @@ const Home = () => {
     })
 
     const products = useSelector(states => states.products)
-    
+
 
     const handleSearchName = (e) => {
         setInputValue(e.target.value.toLowerCase())
     }
 
- const cbFilter = prod => prod.title.toLowerCase().includes(inputValue)
+    const cbFilter = prod => prod.title.toLowerCase().includes(inputValue)
 
-const cbFilterPrice = prod => {
-    const condMin = priceMinMax.min <= prod.price
-    const condMax = prod.price <= priceMinMax.max
-    return condMin && condMax
-}
+    const cbFilterPrice = prod => {
+        const condMin = priceMinMax.min <= prod.price
+        const condMax = prod.price <= priceMinMax.max
+        return condMin && condMax
+    }
 
 
 
     return (
         <div className='home'>
-            <input className='home__input' value={inputValue} onChange={handleSearchName} type="text" />
-            <aside className='home__aside'>
-                <FilterPrice 
-                    setPriceMinMax={setPriceMinMax} 
-                    priceMinMax={priceMinMax}
-                />
-                <FilterCategory />
-            </aside>
-            <div className='home__products'>
-                {
-                    products?.filter(cbFilter).filter(cbFilterPrice).map((prod) => (
-                        <CardProduct
-                            key={prod.id}
-                            prod={prod}
-                        />
-                    ))
-                }
+            <div className='body_home'>
+                <aside className='home__aside'>
+                    <FilterPrice
+                        setPriceMinMax={setPriceMinMax}
+                        priceMinMax={priceMinMax}
+                    />
+                    <FilterCategory />
+                </aside>
+                <div className='main_container'>
+                    <div className='input_search'>
+                        <input placeholder='What are you looking for?' className='home__input' value={inputValue} onChange={handleSearchName} type="text" />
+                        <i className='bx bx-search'></i>
+                    </div>
+                    <div className='home__products'>
+                        {
+                            products?.filter(cbFilter).filter(cbFilterPrice).map((prod) => (
+                                <CardProduct
+                                    key={prod.id}
+                                    prod={prod}
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     )

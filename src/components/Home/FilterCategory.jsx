@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import useFetch from "../../hooks/useFetch"
 import { getAllProductThunk } from "../../store/slices/products.slice"
+import './styles/FilterCategory.css'
 
 
 const FilterCategory = () => {
@@ -26,8 +27,11 @@ const FilterCategory = () => {
 
   return (
     <article>
-        <h3>Categories</h3>
-        <ul>
+        <h3 className="filter__price-title">
+            Categories
+            <i class='bx bx-chevron-down'></i>
+        </h3>
+        <ul className="category_content">
             <li style={{cursor:"pointer" }} 
             onClick={() => handleFilterCartegory()}>
                 All Categories
