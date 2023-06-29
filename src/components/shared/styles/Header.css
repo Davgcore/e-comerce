@@ -85,7 +85,7 @@
         position: fixed;
         top: 4rem;
         padding-right: 0;
-        width: 20vw;
+        width: 10vw;
         height: calc(100vh - 16rem);
         display: flex;
         flex-direction: column;
@@ -95,7 +95,7 @@
         color: white;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
-        background-color: #f85555;
+        
     }
 
     .bx-menu-alt-right{
