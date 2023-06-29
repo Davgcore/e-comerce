@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom"
 import './styles/Header.css'
+import { useState } from "react"
 
 const Header = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
         <header className="header">
             <h1 className="title">
@@ -9,7 +17,8 @@ const Header = () => {
             </h1>
 
             <nav className="navbar">
-                <ul className="lista">
+                <i onClick={toggleMenu} className='bx bx-menu-alt-right'></i>
+                <ul className={`lista ${isOpen ? "is-open" : ""}`}>
                     <li className="register_li">
                         <Link className='register_link' to={'/register'}>
                             <i className='bx bx-user'></i>
@@ -25,8 +34,8 @@ const Header = () => {
                             <i className='bx bx-cart'></i>
                         </Link>
                     </li>
-                    <li className="cart_li">
-                        <Link className='cart_link' to={'/purchases'}>
+                    <li className="list_li">
+                        <Link className='list_link' to={'/purchases'}>
                             <i className='bx bx-align-justify'></i>
                         </Link>
                     </li>

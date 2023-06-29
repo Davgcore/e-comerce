@@ -14,6 +14,7 @@ const Home = () => {
     })
 
     const products = useSelector(states => states.products)
+    
 
     const handleSearchName = (e) => {
         setInputValue(e.target.value.toLowerCase())
@@ -21,18 +22,27 @@ const Home = () => {
 
  const cbFilter = prod => prod.title.toLowerCase().includes(inputValue)
 
+const cbFilterPrice = prod => {
+    const condMin = priceMinMax.min <= prod.price
+    const condMax = prod.price <= priceMinMax.max
+    return condMin && condMax
+}
+
 
 
     return (
         <div className='home'>
             <input className='home__input' value={inputValue} onChange={handleSearchName} type="text" />
             <aside className='home__aside'>
-                <FilterPrice />
+                <FilterPrice 
+                    setPriceMinMax={setPriceMinMax} 
+                    priceMinMax={priceMinMax}
+                />
                 <FilterCategory />
             </aside>
             <div className='home__products'>
                 {
-                    products?.filter(cbFilter).map((prod) => (
+                    products?.filter(cbFilter).filter(cbFilterPrice).map((prod) => (
                         <CardProduct
                             key={prod.id}
                             prod={prod}
