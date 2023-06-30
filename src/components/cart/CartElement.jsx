@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux"
 import { deleteCartThunk } from "../../store/slices/cart.slice"
+import cartElement from './styles/cartElement.css'
 
 const CartElement = ({ prod }) => {
 
@@ -10,21 +11,23 @@ const handleDelete = () => {
 }
 
   return (
-    <article>
-        <header>
-            <img src={prod.product.images[0].url} alt="" />
+    <article className="cart__element">
+        <header className="cart__element-header">
+            <img className="cart__element-header-img" src={prod.product.images[0].url} alt="" />
         </header>
 
-        <section>
-            <h3>{prod.product.title}</h3>
-            <p><span>{prod.quantity}</span> x <span>{prod.product.price}</span></p>
-            <button onClick={handleDelete}>
+        <section className="cart__element-section">
+            <h3 className="cart__element-title">{prod.product.title}</h3>
+            <p className="cart__element-p"><span className="cart__element-quantity">{prod.quantity}</span> x <span className="cart__element-amount">{prod.product.price}</span></p>
+            <button 
+                className="cart__element-btn"
+                onClick={handleDelete}>
                 <i style={{ fontSize: '2rem' }} className='bx bx-trash'></i>
             </button>
         </section>
 
-        <footer>
-            <span>Subtotal</span><span>{prod.quantity * prod.product.price}</span>
+        <footer className="cart__element-footer">
+            <span className="cart__element-subtotal">Subtotal</span><span className="cart__element-total">{prod.quantity * prod.product.price}</span>
         </footer>
     </article>
   )
