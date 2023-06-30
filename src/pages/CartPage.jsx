@@ -19,23 +19,23 @@ const CartPage = () => {
     }
 
   return (
-    <div>
-        <h2>Cart</h2>
-        <div>
+    <div className="cart">
+        <h2 className="cart__title">Cart</h2>
+        <div className="cart__body">
           {
             cart.map(prod => (
               <CartElement 
-                key={prod.id}
+                key={prod.id} 
                 prod={prod}
               />
             ))
           }
         </div>
-        <footer>
-          <div>
-            <span>Total:</span><span>{totalPrice}</span>
+        <footer className="cart__footer">
+          <div className="cart__fotter-container">
+            <span className="cart__total">Total:</span><span className="cart__price">{totalPrice}</span>
           </div>
-          <button onClick={handlePurchase} style={{ fontSize: '2rem'}}>Purchase this cart</button>
+          <button className="cart__btn" onClick={handlePurchase} >Purchase this cart</button>
         </footer>
     </div>
   )
