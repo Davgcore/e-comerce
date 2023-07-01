@@ -33,9 +33,9 @@ const CartPage = () => {
         </div>
         <footer className="cart__footer">
           <div className="cart__fotter-container">
-            <span className="cart__total">Total:</span><span className="cart__price">{totalPrice}</span>
+            <span className="cart__total">Total:</span><span className="cart__price">$ {totalPrice}.00</span>
           </div>
-          <button className="cart__btn" onClick={handlePurchase} >Purchase this cart</button>
+          <button className="cart__btn" onClick={handlePurchase} >Buy It</button>
         </footer>
     </div>
   )
